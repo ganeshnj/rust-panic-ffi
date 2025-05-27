@@ -1,0 +1,10 @@
+[package]
+name = "my-rust-lib"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+
+[lib]
+name = "my_rust_lib"
+crate-type = ["cdylib"]
