@@ -16,6 +16,20 @@ public class Tests
     [Test]
     public void TestIsPanicCaught()
     {
-        RustInterop.IsPanicCaught();
+        try
+        {
+            RustInterop.i_panic();
+        }
+        catch (Exception ex)
+        {
+            Assert.Pass("Caught an exception: " + ex.Message);
+        }
+    }
+
+    [Test]
+    public void TestIsPanicWithUnwindCaught()
+    {
+        RustInterop.i_panic_with_unwind();
+        Assert.Pass("Panic with unwind was caught successfully.");
     }
 }

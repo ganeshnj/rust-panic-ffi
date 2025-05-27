@@ -157,3 +157,4 @@ target/
 .idea
 
 my-lib.sln.DotSettings.user
+my-rust-lib/.DS_Store
